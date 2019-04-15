@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'BuyGreen') }}</title>
+    <title>Buy Green</title>
+    {{-- <title>{{ config('app.name', 'Sistema de controle - Buy Green') }}</title> --}}
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -32,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url('/') }}">Verduraria BuyGreen</a>
+            <a class="navbar-brand" href="{{ url('/') }}">Sistema de estoque - Buy Green</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,14 +51,10 @@
         </div>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-
-            </ul>
-
+    <div  id="navbarSupportedContent">
+        
             <!-- Right Side Of Navbar -->
-            <ul class="nav navbar-nav">
+            <ul>
                 <!-- Authentication Links -->
                 @guest
                     <li class="active">
@@ -65,17 +62,17 @@
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
                         </li>
                     @endif
                 @else
-                    <li class="dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <li class="dropdown-toggle" style="margin-left:90%;">
+                        <a id="navbarDropdown"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown" href="{{ route('logout') }}"
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}

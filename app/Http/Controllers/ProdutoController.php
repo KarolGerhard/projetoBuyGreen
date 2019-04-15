@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Produto;
 use App\Fornecedor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -20,9 +21,12 @@ class ProdutoController extends Controller
     public function index($letra)
     {
         $list_produtos = Produto::indexLetra($letra);
+        $user = Auth::user();
+       // return view('home', ['user' => $user]);
         return view('produtos.index', [
             'produtos' => $list_produtos,
-            'criterio' => $letra
+            'criterio' => $letra,
+            'user' => $user
         ]);
     }
     public function busca(Request $request)
