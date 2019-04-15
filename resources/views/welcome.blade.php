@@ -82,12 +82,6 @@
             <div class="content">
                 <div class="title m-b-md">
                     Buy Green
-                    <p>Bem Vindo</p>
-                </div>
-
-                <div class="links">
-                    {{-- <a href="{{ route('produtos/A') }}">Docs</a> --}}
-                    <a href="https://laracasts.com">Laracasts</a>
                 </div>
             </div>
         </div>
