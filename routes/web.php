@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(["prefix" => "produtos"], function () {
+    Route::get('/', function () {
+        return redirect('/produtos/A');
+    });
+    Route::get("/novo", "ProdutoController@novoView");
+    Route::get("/{id}/editar", "ProdutoController@editarView");
+    Route::get("/{id}/excluir", "ProdutoController@excluirView");
+    Route::get("/{id}/destroy", "ProdutoController@destroy");
+    Route::post("/store", "ProdutoController@store");
+    Route::post("/update", "ProdutoController@update");
+    Route::post("/busca", "ProdutoController@busca");
+    Route::get("/{letra}", "ProdutoController@index");
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
