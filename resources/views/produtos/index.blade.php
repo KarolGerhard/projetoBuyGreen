@@ -20,7 +20,7 @@
     </div>
 
     <div class="row">
-      <h1 class="col-sm-8">Critério: {{ $criterio }}</h1>
+      <h1 class="col-sm-8">Índice: {{ $criterio }}</h1>
         <form action="{{ url('/produtos/busca') }}" method="post">
           <div style="margin-top: 70px" class="col-sm-4 input-group">
             {{ csrf_field() }}

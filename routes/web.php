@@ -32,7 +32,10 @@ Route::group(["prefix" => "produtos"], function () {
 Auth::routes();
 
 Route::group(['middleware' => ['auth']], function(){
-  Route::get('/home', 'HomeController@index')->name('home');
+//   Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return redirect('/produtos/A');
+});
 });
 
 

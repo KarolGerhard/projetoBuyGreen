@@ -108,7 +108,6 @@
       
 
       <div class="from-group col-md-8 {{ $errors->has('fornecedores') ? 'has-error' : '' }}"><br>
-        {{-- <label class="control-label">Dados Fornecedor</label><br> --}}
         <br>
         <h4 id="center"><b>Dados Fornecedor</b></h4>
         <br> 
