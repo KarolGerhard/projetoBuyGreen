@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(["prefix" => "produtos"], function () {
+Route::group(['middleware' => ['auth'],'prefix' => 'produtos'], function () {
     Route::get('/', function () {
         return redirect('/produtos/A');
     });

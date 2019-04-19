@@ -12,7 +12,6 @@
         <!-- Styles -->
         <style>
             html, body {
-                /* //background-color: #fff; */
                 background-image: url(img/frutas.jpg);
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;

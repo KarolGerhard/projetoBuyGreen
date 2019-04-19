@@ -20,18 +20,6 @@
           </span>
         @endif
       </div>
-      {{-- <div class="from-group col-md-12 {{ $errors->has('nome') ? 'has-error' : '' }}">
-        <label class="control-label">Imagem</label>
-        <input value="{{ old('imagem') }}" name="imagem" accept=".gif,.jpg,.png"
-        class="form-control" data-toggle="tooltip" data-placement="top"
-        title="Usar arquivo com dimensões 300x300 
-        - JPG, GIF, PNG">
-        @if($errors->has('nome'))
-          <span class="help-block">
-            {{ $errors->first('nome') }}
-          </span>
-        @endif
-      </div> --}}
       <div class="from-group col-md-5 {{ $errors->has('tipo') ? 'has-error' : '' }}">
         <label  class="control-label">Tipo de hortaliças</label>  
         <select class="form-control" name="tipo" value="{{ old('tipo')}}">
@@ -50,17 +38,6 @@
           </span> 
         @endif
       </div>
-        
-
-      {{-- <div class="from-group col-md-4 {{ $errors->has('tipo') ? 'has-error' : '' }}">
-        <label class="control-label">Tipo</label>
-        <input name="tipo" value="{{ old('tipo') }}" class="form-control" placeholder="hortaliça, legumes, etc.">
-        @if($errors->has('tipo'))
-          <span class="help-block">
-            {{ $errors->first('tipo') }}
-          </span> 
-        @endif
-      </div> --}}
       <div class="from-group col-md-6 {{ $errors->has('periodoValidade') ? 'has-error' : '' }}">
         <label class="control-label">Data de Validade</label>
         <input name="periodoValidade" type="date" value="{{ old('periodoValidade') }}" class="form-control" placeholder="Validade">
